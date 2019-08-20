@@ -1,36 +1,34 @@
 # GameStore
-The game store is a platform, where the users can buy games. 
 
-Exercises: Spring Data Auto Mapping Objects
-This document defines the exercise assignments for the “Databases Frameworks” course @ SoftUni.
-SoftUni Game Store
 The game store is a platform, where the users can buy games. Your task is to create a console application for the store.
-Data Models
+## Data Models
+
 Create the required entities. Use appropriate data types.
-The system contains information about users and games.
-Users can register in the system. After successful registration, the user has email, password, full name, list of games and information whether he/she is an administrator or not.
-The first registered user becomes also an administrator. You can manually mark users as admins in the database.
-A game has title, trailer (YouTube Video Id), image thumbnail (URL), size, price, description and release date
-Users can buy games and make orders. Each order has a single buyer (user) and one or many products.
- Functionality
-All users can view all games.
-All users can view details of each game.
-Logged-in users can logout.
-Logged in users can add/remove games from their shopping cart. 
-Logged in users can buy games that are added to the shopping cart and those games are added to the profile of the user and cannot be bought for second time.
-Administrators can add, edit or delete games.
-Basic user can not add, edit or delete game. 
-1.Design the Database
+* The system contains information about users and games.
+* Users can register in the system. After successful registration, the user has email, password, full name, list of games and information whether he/she is an administrator or not.
+* The first registered user becomes also an administrator. You can manually mark users as admins in the database.
+* A game has title, trailer (YouTube Video Id), image thumbnail (URL), size, price, description and release date
+* Users can buy games and make orders. Each order has a single buyer (user) and one or many products.
+## Functionality
+
+* All users can view all games.
+* All users can view details of each game.
+* Logged-in users can logout.
+* Logged in users can add/remove games from their shopping cart. 
+* Logged in users can buy games that are added to the shopping cart and those games are added to the profile of the user and cannot be bought for second time.
+* Administrators can add, edit or delete games.
+* Basic user can not add, edit or delete game. 
+## 1.Design the Database
 Design entity classes and create a database to hold the users, games and orders.
-2.Implement User Registration, Login and Logout
+## 2.Implement User Registration, Login and Logout
 The guest users can register and log in. 
-RegisterUser|<email>|<password>|<confirmPassword>|<fullName> - This command adds new user to the database in case of valid parameters. Otherwise, prints appropriate message informing why the user cannot be registered. The requirements for valid parameters are:
-oEmail – must contain @ sign and a period. It must be unique.
-oPassword – length must be at least 6 symbols and must contain at least 1 uppercase, 1 lowercase letter and 1 digit.
-oConfirm Password – must match the provided password.
-LoginUser|<email>|<password> - This command sets the current logged in user if it exists. Otherwise, prints an appropriate message.
-Logged in user can logout.
-Logout – This command logs out the user from the system. If there is no logged in user, print appropriate message.
+* RegisterUser|<email>|<password>|<confirmPassword>|<fullName> - This command adds new user to the database in case of valid parameters.   Otherwise, prints appropriate message informing why the user cannot be registered. The requirements for valid parameters are:
+    oEmail – must contain @ sign and a period. It must be unique.
+    oPassword – length must be at least 6 symbols and must contain at least 1 uppercase, 1 lowercase letter and 1 digit.
+    oConfirm Password – must match the provided password.
+* LoginUser|<email>|<password> - This command sets the current logged in user if it exists. Otherwise, prints an appropriate message.
+    Logged in user can logout.
+* Logout – This command logs out the user from the system. If there is no logged in user, print appropriate message.
 Example
 Input	Output
 RegisterUser|ivan@ivan.com|Ivan12|Ivan12|Ivan
