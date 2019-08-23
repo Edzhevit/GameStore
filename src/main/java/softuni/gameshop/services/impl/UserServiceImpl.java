@@ -3,6 +3,7 @@ package softuni.gameshop.services.impl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import softuni.gameshop.domain.dtos.UserLoginDto;
 import softuni.gameshop.domain.dtos.UserRegisterDto;
 import softuni.gameshop.domain.entities.Game;
@@ -18,6 +19,7 @@ import javax.validation.ValidatorFactory;
 import java.util.Set;
 
 @Service
+@Transactional
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;

@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Set;
 
 @Service
+@Transactional
 public class GameServiceImpl implements GameService {
 
     private final GameRepository gameRepository;
