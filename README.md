@@ -1,5 +1,13 @@
 # GameStore
 
+## Technology stack used to implement the project are: 
+
+* Spring Boot
+* Hibernate
+* Hibernate Validator
+* JPA
+* JDBC
+
 The game store is a platform, where the users can buy games.
 ## Data Models
 
