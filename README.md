@@ -1,9 +1,8 @@
 # GameStore
 
-The game store is a platform, where the users can buy games. Your task is to create a console application for the store.
+The game store is a platform, where the users can buy games.
 ## Data Models
 
-Create the required entities. Use appropriate data types.
 * The system contains information about users and games.
 * Users can register in the system. After successful registration, the user has email, password, full name, list of games and information whether he/she is an administrator or not.
 * The first registered user becomes also an administrator. You can manually mark users as admins in the database.
@@ -18,9 +17,8 @@ Create the required entities. Use appropriate data types.
 * Logged in users can buy games that are added to the shopping cart and those games are added to the profile of the user and cannot be bought for second time.
 * Administrators can add, edit or delete games.
 * Basic user can not add, edit or delete game. 
-## 1.Design the Database
-Design entity classes and create a database to hold the users, games and orders.
-## 2.Implement User Registration, Login and Logout
+
+## 1.Implemented User Registration, Login and Logout
 The guest users can register and log in. 
 * RegisterUser|email|password|confirmPassword|fullName - This command adds new user to the database in case of valid parameters.   Otherwise, prints appropriate message informing why the user cannot be registered. The requirements for valid parameters are:
 
@@ -29,14 +27,16 @@ The guest users can register and log in.
     o Password – length must be at least 6 symbols and must contain at least 1 uppercase, 1 lowercase letter and 1 digit.
     
     o Confirm Password – must match the provided password.
+    
 * LoginUser|email|password - This command sets the current logged in user if it exists. Otherwise, prints an appropriate message.
     Logged in user can logout.
+    
 * Logout – This command logs out the user from the system. If there is no logged in user, print appropriate message.
 
-## 3.Implement Managing Games
+## 2.Implemented Managing Games
 As an admin, you have the option to add/edit/delete games to the catalog. 
 * AddGame|title|price|size|trailer|thubnailURL|description|releaseDate
-* EditGame|id|values - A game should be edited in case of valid id. Otherwise, print appropriate message.
+* EditGame|id|values - A game should be edited in case of valid id. Otherwise, prints appropriate message.
 A game should be added/edited only to the catalog, if it matches the following criteria:
 
    o Title – has to begin with an uppercase letter and must have length between 3 and 100 symbols (inclusively).
@@ -54,15 +54,15 @@ A game should be added/edited only to the catalog, if it matches the following c
    
 * DeleteGame|id - A game should be deleted in case of valid id. Otherwise, print an appropriate message.
 
-## 4.Implement View Games 
-Implement a view for retrieving different information about the games.
+## 3.Implemented View Games 
+Implemented a view for retrieving different information about the games.
 * AllGames - print titles and price of all games.
 * DetailsGame|gameTitle - print details for а single game. 
 * OwnedGames – print the games bought by the currently logged in user. 
     
     o First you have to make a game purchase method from a user
 
-## 5.Implement Shopping Cart*
+## 4.Implemented Shopping Cart*
 Each user should be able to buy a game. 
 * AddItem|gameTitle - add game to shopping cart.
 * RemoveItem|gameTitle - remove game from shopping cart.
